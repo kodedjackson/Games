@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Guessing Game 2</title>
+</head>
+<body>
+    <section id="gamesec">
+        <h1 id="heading">Guess a number between 1 to 10!</h1>
+        <div id="maindiv">
+            <label>HIGHSCORE:</label><br>
+            <input id="highscore" type="text" value="" disabled ></input><br>
+            <label id="labelId" style="font-size: 100px;" value="0">0</label>
+        </div>
+        <div id="buttonDiv">
+            <button id="upbtn" onclick="up()" style="font-size: 50px; align-items: center">+</button>
+            <button id="downbtn" onclick="down()" style="font-size: 80px; align-items: center">-</button><br>
+            <button id="startbtn" onclick="start()" style="font-size: 50px; align-items: center">START</button>
+            <button id="resetbtn" onclick="reset()" style="font-size: 50px; align-items: center">RESET</button>
+
+        </div>
+    </section>
+</body>
+<script src="main.js"></script>
+</html>
