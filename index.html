@@ -8,21 +8,29 @@
     <title>Guessing Game 2</title>
 </head>
 <body>
-    <section id="gamesec">
-        <h1 id="heading">Guess a number between 1 to 10!</h1>
+    <div id="gamesec">
+        <video autoplay muted loop id="myVideo">
+            <source src="Vj Loops - 32745.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>-->
+          <h5 id="heading">HIGHSCORE: </h5> 
+          <h4 id="heading">SCORE:</h4>
+          <input id="highscore" type="number" value="" disabled ></input><br>
+        <h1 id="heading">Guess a number between<br> 1 to 5!</h1>
         <div id="maindiv">
-            <label>HIGHSCORE:</label><br>
-            <input id="highscore" type="text" value="" disabled ></input><br>
-            <label id="labelId" style="font-size: 100px;" value="0">0</label>
+            <input id="inputId" style="font-size: 60px;" value="0"></label>
         </div>
         <div id="buttonDiv">
-            <button id="upbtn" onclick="up()" style="font-size: 50px; align-items: center">+</button>
-            <button id="downbtn" onclick="down()" style="font-size: 80px; align-items: center">-</button><br>
-            <button id="startbtn" onclick="start()" style="font-size: 50px; align-items: center">START</button>
-            <button id="resetbtn" onclick="reset()" style="font-size: 50px; align-items: center">RESET</button>
+            <button id="upbtn" onclick="up()" style="font-size: 30px; align-items: center">+</button>
+            <button id="downbtn" onclick="down()" style="font-size: 30px; align-items: center">-</button><br>
+            <button id="startbtn" onclick="start()" style="font-size: 30px; align-items: center">START GAME</button>
+            <!--<button id="resetbtn" onclick="reset()" style="font-size: 30px; align-items: center">RESET</button>-->
 
         </div>
-    </section>
+        <audio id="myAudio" >
+            <source src="/audio.wav" type="audio/wav">
+        </audio>
+    </div>
 </body>
 <script src="main.js"></script>
 </html>

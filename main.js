@@ -1,15 +1,19 @@
-let guess = document.getElementById("labelId").value;
-let computerguess = Math.floor(Math.random() * 5 + 1);
+let guess = Number(document.getElementById("inputId").value);
+let computerguess = Math.floor(Math.random() * 3 + 1);
+var x = document.getElementById("myAudio");
 console.log(computerguess);
+console.log(typeof guess)
 
 
 function up(){
-    a = document.getElementById("labelId").innerHTML = guess += 1;
+    playAudio()
+    a = document.getElementById("inputId").value = guess += 1;
     console.log (typeof a)
 }
 
 function down(){
-    a = document.getElementById("labelId").innerHTML = guess -= 1;
+    playAudio()
+    a = document.getElementById("inputId").value = guess -= 1;
     console.log (typeof a)
 }
 
@@ -17,29 +21,33 @@ function reset(){
     location.reload()
 }
 
-function checkHighscore(){
+/*function checkHighscore(){
     a = document.getElementById("highscore").value
     if ( a > 50){
         window.alert("You won this round")
     } else console.log("Try again")
+}*/
+
+
+function playAudio() {
+    x.play();
 }
 
-function start(){
-
-    checkHighscore();
-    if (guess < computerguess){
-        window.alert ("Sorry, too low")
-        a =document.getElementById("highscore").value -= 10;
-    } else if (guess > computerguess){
-        window.alert("Sorry, too low");
-        document.getElementById("highscore").value -=10
-    } else (window.alert("Yaa, You got it right"));
-        a = Number(document.getElementById("highscore").value +=20);
-        console.log(typeof a )
-}
-
-
-
+function start(){  
+    playAudio()
+        if (guess < computerguess){
+            window.alert ("Sorry, too low")
+            ab =document.getElementById("highscore").value -= 5;
+            console.log(typeof a)
+        }else if (guess > computerguess){
+            window.alert("Sorry, too high");
+            ac = document.getElementById("highscore").value -=5;
+            console.log(typeof ac);
+        } else window.alert("congrats");
+            ad = document.getElementById("highscore").value += 10;
+            console.log(typeof ad);
+            reset();
+    }   
 /*
 
 var btnsStart = document.getElementById("startbtn")
