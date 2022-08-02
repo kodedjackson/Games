@@ -15,17 +15,27 @@
           </video>-->
           <h5 id="heading">HIGHSCORE: </h5> 
           <h4 id="heading">SCORE:</h4>
-          <input id="highscore" type="number" value="" disabled ></input><br>
-        <h1 id="heading">Guess a number between<br> 1 to 5!</h1>
-        <div id="maindiv">
+          <label id="score" type="text">0</label><br>
+        <h1 id="heading">Guess a number between<br> 1 to 4</h1>
+        <!--<div id="maindiv">
             <input id="inputId" style="font-size: 60px;" value="0"></label>
+        </div>-->
+        <div id="time" hidden>
+            Time Left: 
         </div>
         <div id="buttonDiv">
-            <button id="upbtn" onclick="up()" style="font-size: 30px; align-items: center">+</button>
+            <button id="btn1" onclick="btn1()" style="font-size: 35px">1</button>
+            <button id="btn2" onclick="btn2()" style="font-size: 35px">2</button>
+            <button id="btn3" onclick="btn3()" style="font-size: 35px">3</button>
+            <button id="btn4" onclick="btn4()" style="font-size: 35px">4</button>
+            <!--            <button id="upbtn" onclick="up()" style="font-size: 30px; align-items: center">+</button>
             <button id="downbtn" onclick="down()" style="font-size: 30px; align-items: center">-</button><br>
             <button id="startbtn" onclick="start()" style="font-size: 30px; align-items: center">START GAME</button>
-            <!--<button id="resetbtn" onclick="reset()" style="font-size: 30px; align-items: center">RESET</button>-->
-
+            <button id="resetbtn" onclick="reset()" style="font-size: 30px; align-items: center">RESET</button>-->
+        </div>
+        <div>
+            <button id="startbtn" onclick="start()" style="font-size: 30px; align-items: center">START GAME</button>
+           
         </div>
         <audio id="myAudio" >
             <source src="/audio.wav" type="audio/wav">
