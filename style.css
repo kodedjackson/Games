@@ -8,61 +8,42 @@
   z-index: 0;
 }
 
-h2{
-  z-index: 2;
-}
-#heading {
+
+#heading, #score {
   z-index: 2;
   position: relative;
   margin: auto;
 }
-
-#maindiv{
-  position: relative;
-  margin: auto;
-}
-
-#score {
-  padding-top: 70px;
-  border: #00ffd5;
-  color: white;
-  text-align: center;
-  font-size: 50px;
-  z-index: 2;
-  position: relative;
-}
-
 
 #buttonDiv{
-  padding: 30px;
-  margin: auto;
+  margin-top: 50px;
+  justify-content: center;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: repeat(2, 0.3fr );
+  gap: 30px;
 }
 
 
-#startbtn{
-  width: 100%;
-  margin: auto;
-}
 
 /*::::::::::::::::::::LABEL STYLE::::::::::*/
+
+
 #gamesec{
-  height: 100%;
-  width: 100%;
   text-align: center;
   color:white;
-  letter-spacing: 3px;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url("bg.jpg");
+  background-color: #ff0000;
+  letter-spacing: 2px;
   z-index: 2;
+  padding: 10px;
+  background: url(/Vj\ Loops\ -\ 32745.mp4);
+  z-index: 1;
+
 }
 
+
+/*
 #inputId{
   margin-top: 10px;
-  font-size: 30px;
     width: 50%;
     background: linear-gradient(
     45deg,
@@ -83,14 +64,16 @@ h2{
     
 
 }
+*/
 
+#startbtn{
+  width: 90%;
+  height: 70px;
+
+}
 
 button {
-  width: 100px;
-  height: 100px;
-  font-size: 20px;
-  padding: 0.6em 2em;
-  margin: 10px;
+  padding: 0.9em 2.5em;
   border: none;
   outline: none;
   color: rgb(255, 255, 255);
@@ -102,6 +85,8 @@ button {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  margin-top: 30px;
+  margin-bottom: 25px;
 }
 
 button:before {

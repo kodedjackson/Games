@@ -1,10 +1,12 @@
-let computerguess = Math.floor(Math.random() * 4 + 1);
+computerguess = Math.floor(Math.random() * 4 + 1);
+
+console.log(computerguess)
+
 var x = document.getElementById("myAudio");
 let timeLeft = 10;
 let timerinterval;
 let correctanswer = computerguess;
-
-console.log(computerguess);
+score = 0;
 
 let button1 = document.getElementById("btn1");
 let button2 = document.getElementById("btn2");
@@ -14,30 +16,35 @@ let button4 = document.getElementById("btn4");
 
 function btn1(){
     if (computerguess == 1){
-        console.log("correct answer")
+        console.log("correct answer");
+        document.getElementById("score").innerHTML = score +=10;
     } else console.log("wrong answer");
-    nextQuestion()
+    document.getElementById("score").innerHTML = score -= 5;
 }
 
 function btn2(){
     if (computerguess == 2){
-        console.log("correct answer")
+        console.log("correct answer");
+        document.getElementById("score").innerHTML = score +=10;
     } else console.log("wrong answer");
-    nextQuestion()
+    document.getElementById("score").innerHTML = score -= 5;
 }
 
 function btn3(){
     if (computerguess == 3){
-        console.log("correct answer")
+        console.log("correct answer");
+        document.getElementById("score").innerHTML = score +=10;
     } else console.log("wrong answer");
+    document.getElementById("score").innerHTML = score -= 5;
     nextQuestion()
 }
 
 function btn4(){
     if (computerguess == 4){
-        console.log("correct answer")
+        console.log("correct answer");
+        document.getElementById("score").innerHTML = score +=10;
     } else console.log("wrong answer");
-    nextQuestion()
+    document.getElementById("score").innerHTML = score -= 5;
 }
 
 
@@ -85,7 +92,6 @@ function playAudio() {
 }
 
 function start(){  
-    nextQuestion();
     timmer();
     if (computerguess == correctanswer ){
         console.log ("Correct")
@@ -93,9 +99,6 @@ function start(){
     dis();
 }   
 
-function nextQuestion(){
-    console.log(computerguess);
-}
 /*
 
 var btnsStart = document.getElementById("startbtn")
