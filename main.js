@@ -1,4 +1,4 @@
-var x = document.getElementById("myAudio");
+audiofile = document.getElementById("myAudio");
 let timeLeft = 10;
 let timerinterval;
 highscore = 0;
@@ -14,12 +14,16 @@ function timmer(){
             timeDisplay.innerHTML = "Time Left: " + timeLeft
             if(timeLeft == 0){  
                 clearInterval(timerinterval);
+                document.getElementById("btn1").hidden = true;
+                document.getElementById("btn2").hidden = true;
+                document.getElementById("btn3").hidden = true;
+                document.getElementById("btn4").hidden = true;
             }
     },1000)
 }
 
 function dis(){
-    document.getElementById("startbtn").disabled =true;
+    document.getElementById("startbtn").hidden =true;
 }
 
 function playAudio() {
@@ -27,6 +31,7 @@ function playAudio() {
 }
 
 function start(){
+    audiofile;
     nextquestion();
     timmer();
     dis();
@@ -36,14 +41,14 @@ function start(){
 
 function nextquestion(){
     let operationDiv = document.getElementById("operation");
-    correctAnswer = Math.floor(Math.random() * 4) + 1;
+    correctAnswer = Math.floor(Math.random() * 9) + 1;
     operationDiv.innerHTML = "What is your number?";
     console.log(correctAnswer );
     
-    let wrongAnswer1 = Math.floor(Math.random()* 4) * Math.floor(Math.random()* 4);
-    let wrongAnswer2 = Math.floor(Math.random()* 4) * Math.floor(Math.random()* 4);
-    let wrongAnswer3 = Math.floor(Math.random()* 4) * Math.floor(Math.random()* 4);
-    let wrongAnswer4 = Math.floor(Math.random()* 4) * Math.floor(Math.random()* 4);
+    let wrongAnswer1 = Math.floor(Math.random()* 3) + 1 * Math.floor(Math.random()* 3)  + 1 * Math.floor(Math.random()* 3)  + 1;  
+    let wrongAnswer2 = Math.floor(Math.random()* 3) + 1 * Math.floor(Math.random()* 3)  + 1 * Math.floor(Math.random()* 3)  + 1;  
+    let wrongAnswer3 = Math.floor(Math.random()* 3) + 1 * Math.floor(Math.random()* 3)  + 1 * Math.floor(Math.random()* 3)  + 1;  
+    let wrongAnswer4 = Math.floor(Math.random()* 3) + 1 * Math.floor(Math.random()* 3)  + 1 * Math.floor(Math.random()* 3)  + 1;  
 
     document.getElementById("btn1").innerHTML = wrongAnswer1;
     document.getElementById("btn2").innerHTML = wrongAnswer2;
@@ -68,6 +73,8 @@ function checkAnswer(buttonIndex){
     let answer =document.getElementById("btn" + buttonIndex).innerHTML;
     if (answer == correctAnswer) score += 10;
     document.getElementById("currentscore").innerHTML = "Current Score " +  score;
+    if (score > highscore) highscore = score;
+    document.getElementById("highscore").innerHTML = "High Score: " + highscore; 
     nextquestion();
 }
 /*
