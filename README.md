@@ -2,11 +2,13 @@
 
 I have designed and code 3 games in this repository.
 
-1. Computer Guess Game:
-The computer will generate a random number between 1 to 9 and you have to guess it before the time reaches 0!
+
 
 2. ADDIIONAL GAME:
 The computer will generate two numbers for you to add together, you have 10 seconds to hit a new highscore
+
+1. Subtraction:
+The computer will generate a random number between 1 to 9 and you have to guess it before the time reaches 0!
 
 3. Multiplication Game:
 The computer will generate two numbers for you to multiply, you have 10 seconds to hit a new highscore
