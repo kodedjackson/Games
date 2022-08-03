@@ -1,23 +1,48 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guessing Game</title>
-    <link rel="stylesheet"  type=“text/css” href="/style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Guessing Game 2</title>
 </head>
 <body>
-    <main id="main2">
-        <div id="show2">
-            <button id="computerguess">MULTIPLICATION GAME</button>
-            <h2>COMING SOON!</h2>
-       <a href="/computerguess.html"><button id="margini" style="font-size:15px;">Play<br> COMPUTER GUESS INSTEAD</button></a></h2>
+    <div id="gamesec">
+        <video autoplay muted loop id="myVideo">
+            <source src="Vj Loops - 32745.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+          <div id="highscore">High Score: 0</div> 
+          <div id="currentscore" type="text">Current Score: 0</div><br>
+        <h1 id="heading">What is the Answer?</h1>
+        <div id="operation">0 * 0</div>
+        <!--<div id="maindiv">
+            <input id="inputId" style="font-size: 60px;" value="0"></label>
+        </div>-->
+        <div id="time" hidden>
+            Time Left: 
         </div>
-
-    </main>
-
-    
+        <div id="buttonDiv">
+            <button id="btn1" onclick="checkAnswer(1)" style="font-size: 25px">0</button>
+            <button id="btn2" onclick="checkAnswer(2)" style="font-size: 25px">0</button>
+            <button id="btn3" onclick="checkAnswer(3)" style="font-size: 25px">0</button>
+            <button id="btn4" onclick="checkAnswer(4)" style="font-size: 25px">0</button>
+            <!--            <button id="upbtn" onclick="up()" style="font-size: 30px; align-items: center">+</button>
+            <button id="downbtn" onclick="down()" style="font-size: 30px; align-items: center">-</button><br>
+            <button id="startbtn" onclick="start()" style="font-size: 30px; align-items: center">START GAME</button>
+            <button id="resetbtn" onclick="reset()" style="font-size: 30px; align-items: center">RESET</button>-->
+        </div>
+        <div id="startbtnDiv">
+            <button id="startbtn" onclick="start()">START</button>
+        </div>
+        <audio id="myAudio" >
+            <source src="/files/beep audio.mp3" type="audio/mp3">
+        </audio>
+    </div>
 </body>
+<script src="/scripts/multiply.js"></script>
 </html>
+
+
+
