@@ -1,9 +1,16 @@
-audiofile = document.getElementById("myAudio");
+var x = document.getElementById("myAudio");
 let timeLeft = 10;
 let timerinterval;
 highscore = 0;
 score = 0;
 correctAnswer = 0;
+
+window.onload = function(){
+    scoreFromBrowser = localStorage.getItem("highscore");
+    if (scoreFromBrowser != undefined) highscore = scoreFromBrowser;
+    document.getElementById("highscore").innerHTML = "High Score: " + highscore; 
+
+}
 
 
 function timmer(){
@@ -18,6 +25,8 @@ function timmer(){
                 document.getElementById("btn2").hidden = true;
                 document.getElementById("btn3").hidden = true;
                 document.getElementById("btn4").hidden = true;
+                window.alert("GAME OVER!");
+                location.reload();
             }
     },1000)
 }
@@ -31,7 +40,7 @@ function playAudio() {
 }
 
 function start(){
-    audiofile;
+    playAudio()
     nextquestion();
     timmer();
     dis();
@@ -74,6 +83,7 @@ function checkAnswer(buttonIndex){
     if (answer == correctAnswer) score += 10;
     document.getElementById("currentscore").innerHTML = "Current Score " +  score;
     if (score > highscore) highscore = score;
+    localStorage.setItem("highscore", highscore);
     document.getElementById("highscore").innerHTML = "High Score: " + highscore; 
     nextquestion();
 }
