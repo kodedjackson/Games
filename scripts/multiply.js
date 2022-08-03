@@ -53,7 +53,7 @@ function nextquestion(){
     let firstNum = Math.floor(Math.random() * 10) +1;
     let secondNum =  Math.floor(Math.random() * 10) +1;
     correctAnswer = firstNum * secondNum;
-    operationDiv.innerHTML = firstNum + " * " + secondNum;
+    operationDiv.innerHTML = firstNum + " ×  " + secondNum;
     console.log(correctAnswer );
     
     let wrongAnswer1 = Math.floor(Math.random()* 10) + 1 * Math.floor(Math.random()* 10); 
