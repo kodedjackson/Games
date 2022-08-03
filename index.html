@@ -1,45 +1,35 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Guessing Game 2</title>
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <div id="gamesec">
-        <video autoplay muted loop id="myVideo">
-            <source src="Vj Loops - 32745.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-          </video>
-          <div id="highscore">High Score: 0</div> 
-          <div id="currentscore" type="text">Current Score: 0</div><br>
-        <h1 id="heading">Guess a number between<br> 1 to 9</h1>
-        <div id="operation">What is your number?</div>
-        <!--<div id="maindiv">
-            <input id="inputId" style="font-size: 60px;" value="0"></label>
-        </div>-->
-        <div id="time" hidden>
-            Time Left: 
+    <main id="main">
+        <div class="show">
+                <h1 class="">What Game would you like to play?</h1>
+            <section class="show">
+                <a href="/computerguess.html"><button id="computerguess">COMPUTER GUESS</button></a>
+                <p>The computer will generate a random number between 1 to 9 and you have to guess it before 
+                    the time reaches 0!</p>
+            </section>
+            <section class="show">
+                <button id="computerguess">ADDITION GAME</button>
+                <p>The computer will generate a random number between 1 to 9 and you have to guess it before 
+                    the time reaches 0!</p>
+            </section>
+            <section class="show">
+                <button id="computerguess">MULTIPLICATION</button>
+                <p>The computer will generate a random number between 1 to 9 and you have to guess it before 
+                the time reaches 0!</p>
+            </section>
         </div>
-        <div id="buttonDiv">
-            <button id="btn1" onclick="checkAnswer(1)" style="font-size: 25px">0</button>
-            <button id="btn2" onclick="checkAnswer(2)" style="font-size: 25px">0</button>
-            <button id="btn3" onclick="checkAnswer(3)" style="font-size: 25px">0</button>
-            <button id="btn4" onclick="checkAnswer(4)" style="font-size: 25px">0</button>
-            <!--            <button id="upbtn" onclick="up()" style="font-size: 30px; align-items: center">+</button>
-            <button id="downbtn" onclick="down()" style="font-size: 30px; align-items: center">-</button><br>
-            <button id="startbtn" onclick="start()" style="font-size: 30px; align-items: center">START GAME</button>
-            <button id="resetbtn" onclick="reset()" style="font-size: 30px; align-items: center">RESET</button>-->
-        </div>
-        <div id="startbtnDiv">
-            <button id="startbtn" onclick="start()">START</button>
-        </div>
-        <audio id="myAudio" >
-            <source src="/beep audio.mp3" type="audio/mp3">
-        </audio>
-    </div>
+    </main>
+
+    
 </body>
-<script src="main.js"></script>
 </html>

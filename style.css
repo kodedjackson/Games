@@ -1,4 +1,48 @@
-#myVideo {
+
+/*::::::::::::::HOMEPAGE STYLING:::::::::::::::*/
+body{
+  min-height: 100vh;
+  width:  100%;
+  background-size: cover;
+  position: fixed;
+  margin: auto;
+  padding-top: 50px;
+  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.2)), url(/26293.jpg);
+}
+#computerguess{
+  font-size: 20px;
+  position: relative;
+  z-index: 2;
+  margin: 2px;
+}
+
+.show{
+  z-index: 2;
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+
+#main{
+  padding: 0px 20px 0px 20px;
+}
+
+p{
+  background-color: black;
+  margin-top: 2px;
+  margin-bottom: 30px;
+  border-radius: 30px;
+}
+
+/*::::::::::::::INDEX STYLING:::::::::::::::*/
+
+
+
+
+
+
+#myVideo{
   position: fixed;
   right: 0;
   bottom: 0;
@@ -7,6 +51,8 @@
   background-size: contain;
   z-index: 0;
 }
+
+
 
 
 #heading, #currentscore, #operation, #highscore {
@@ -22,22 +68,13 @@
   grid-template-columns: repeat(2, 0.3fr );
   gap: 30px;
 }
-
-
-
-/*::::::::::::::::::::LABEL STYLE::::::::::*/
-
-
 #gamesec{
   text-align: center;
   color:white;
-  background-color: #ff0000;
   letter-spacing: 2px;
   z-index: 2;
   padding: 10px;
-  background: url(/Vj\ Loops\ -\ 32745.mp4);
   z-index: 1;
-
 }
 
 
