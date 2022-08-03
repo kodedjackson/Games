@@ -91,10 +91,3 @@ function checkAnswer(buttonIndex){
     document.getElementById("highscore").innerHTML = "High Score: " + highscore; 
     nextquestion();
 }
-/*
-
-var btnsStart = document.getElementById("startbtn")
-
-btnsStart.addEventListener ("click", checkHighscore)
-
-*/
