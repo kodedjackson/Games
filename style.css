@@ -64,6 +64,18 @@ p{
   z-index: 2;
   position: relative;
   margin: auto;
+  
+}
+
+#operation{
+  font-size: 30px;
+  background-color: black;
+  border-radius: 15px;
+  padding: 20px;
+  width: 100px;
+  height: 20px;
+  text-align: center;
+  justify-content: center;
 }
 
 #buttonDiv{

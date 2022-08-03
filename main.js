@@ -50,14 +50,16 @@ function start(){
 
 function nextquestion(){
     let operationDiv = document.getElementById("operation");
-    correctAnswer = Math.floor(Math.random() * 9) + 1;
-    operationDiv.innerHTML = "What is your number?";
+    let firstNum = Math.floor(Math.random() * 10) +1;
+    let secondNum =  Math.floor(Math.random() * 10) +1;
+    correctAnswer = firstNum + secondNum;
+    operationDiv.innerHTML = firstNum + " + " + secondNum;
     console.log(correctAnswer );
     
-    let wrongAnswer1 = Math.floor(Math.random()* 3) + 1 * Math.floor(Math.random()* 3)  + 1 * Math.floor(Math.random()* 3)  + 1;  
-    let wrongAnswer2 = Math.floor(Math.random()* 3) + 1 * Math.floor(Math.random()* 3)  + 1 * Math.floor(Math.random()* 3)  + 1;  
-    let wrongAnswer3 = Math.floor(Math.random()* 3) + 1 * Math.floor(Math.random()* 3)  + 1 * Math.floor(Math.random()* 3)  + 1;  
-    let wrongAnswer4 = Math.floor(Math.random()* 3) + 1 * Math.floor(Math.random()* 3)  + 1 * Math.floor(Math.random()* 3)  + 1;  
+    let wrongAnswer1 = Math.floor(Math.random()* 10) + 1 * Math.floor(Math.random()* 10); 
+    let wrongAnswer2 = Math.floor(Math.random()* 10) + 1 * Math.floor(Math.random()* 10); 
+    let wrongAnswer3 = Math.floor(Math.random()* 10) + 1 * Math.floor(Math.random()* 10); 
+    let wrongAnswer4 = Math.floor(Math.random()* 10) + 1 * Math.floor(Math.random()* 10); 
 
     document.getElementById("btn1").innerHTML = wrongAnswer1;
     document.getElementById("btn2").innerHTML = wrongAnswer2;
@@ -81,7 +83,9 @@ function nextquestion(){
 function checkAnswer(buttonIndex){
     let answer =document.getElementById("btn" + buttonIndex).innerHTML;
     if (answer == correctAnswer) score += 10;
+    document.getElementById("operation").innerHTML = "Correct!"
     document.getElementById("currentscore").innerHTML = "Current Score " +  score;
+    document.getElementById("operation").innerHTML = "Correct!"
     if (score > highscore) highscore = score;
     localStorage.setItem("highscore", highscore);
     document.getElementById("highscore").innerHTML = "High Score: " + highscore; 
