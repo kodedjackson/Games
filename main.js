@@ -1,51 +1,9 @@
-computerguess = Math.floor(Math.random() * 4 + 1);
-
-console.log(computerguess)
-
 var x = document.getElementById("myAudio");
 let timeLeft = 10;
 let timerinterval;
-let correctanswer = computerguess;
+highscore = 0;
 score = 0;
-
-let button1 = document.getElementById("btn1");
-let button2 = document.getElementById("btn2");
-let button3 = document.getElementById("btn3");
-let button4 = document.getElementById("btn4");
-
-
-function btn1(){
-    if (computerguess == 1){
-        console.log("correct answer");
-        document.getElementById("score").innerHTML = score +=10;
-    } else console.log("wrong answer");
-    document.getElementById("score").innerHTML = score -= 5;
-}
-
-function btn2(){
-    if (computerguess == 2){
-        console.log("correct answer");
-        document.getElementById("score").innerHTML = score +=10;
-    } else console.log("wrong answer");
-    document.getElementById("score").innerHTML = score -= 5;
-}
-
-function btn3(){
-    if (computerguess == 3){
-        console.log("correct answer");
-        document.getElementById("score").innerHTML = score +=10;
-    } else console.log("wrong answer");
-    document.getElementById("score").innerHTML = score -= 5;
-    nextQuestion()
-}
-
-function btn4(){
-    if (computerguess == 4){
-        console.log("correct answer");
-        document.getElementById("score").innerHTML = score +=10;
-    } else console.log("wrong answer");
-    document.getElementById("score").innerHTML = score -= 5;
-}
+correctAnswer = 0;
 
 
 function timmer(){
@@ -64,41 +22,53 @@ function dis(){
     document.getElementById("startbtn").disabled =true;
 }
 
-/*
-function up(){
-    a = document.getElementById("inputId").value = guess += 1;
-    console.log (typeof a)
-}
-
-function down(){
-    a = document.getElementById("inputId").value = guess -= 1;
-    console.log (typeof a)
-}
-
-function reset(){
-    location.reload()
-}
-
-function checkHighscore(){
-    a = document.getElementById("highscore").value
-    if ( a > 50){
-        window.alert("You won this round")
-    } else console.log("Try again")
-}*/
-
-
 function playAudio() {
     x.play();
 }
 
-function start(){  
+function start(){
+    nextquestion();
     timmer();
-    if (computerguess == correctanswer ){
-        console.log ("Correct")
-    }
     dis();
+    
 }   
 
+
+function nextquestion(){
+    let operationLabel = document.getElementById("generatedNumLabel");
+    correctAnswer = Math.floor(Math.random() * 4) + 1;
+    operationLabel.innerHTML = "GO!";
+    console.log(correctAnswer );
+    
+    let wrongAnswer1 = Math.floor(Math.random()* 4) + 1;
+    let wrongAnswer2 = Math.floor(Math.random()* 4) + 1;
+    let wrongAnswer3 = Math.floor(Math.random()* 4) + 1;
+    let wrongAnswer4 = Math.floor(Math.random()* 4) + 1;
+
+    document.getElementById("btn1").innerHTML = wrongAnswer1;
+    document.getElementById("btn2").innerHTML = wrongAnswer2;
+    document.getElementById("btn3").innerHTML = wrongAnswer3;
+    document.getElementById("btn4").innerHTML = wrongAnswer4;
+
+    let correctAnswerIndex = Math.floor(Math.random()* 4) + 1; // 1 2 3 4
+    let correctAnswerId = "btn" + correctAnswerIndex;
+    document.getElementById(correctAnswerId).innerHTML = correctAnswer;
+
+
+
+    console.log(wrongAnswer2)
+    console.log(wrongAnswer3)
+    console.log(wrongAnswer4)
+    console.log(wrongAnswer1)
+
+}
+
+
+function checkAnswer(buttonIndex){
+    let answer =document.getElementById("btn" + buttonIndex).innerHTML;
+    if (answer == correctAnswer) score += 10;
+    document.getElementById("currentscore").innerHTML = "Current Score " +  score;
+}
 /*
 
 var btnsStart = document.getElementById("startbtn")

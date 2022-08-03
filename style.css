@@ -9,7 +9,7 @@
 }
 
 
-#heading, #score {
+#heading, #currentscore, #generatedNumLabel, #highscore {
   z-index: 2;
   position: relative;
   margin: auto;
@@ -41,30 +41,7 @@
 }
 
 
-/*
-#inputId{
-  margin-top: 10px;
-    width: 50%;
-    background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
-    border-radius: 50px;
-    text-align: center;
-    color: white;
-    position: relative;
-    
 
-}
-*/
 
 #startbtn{
   width: 90%;
