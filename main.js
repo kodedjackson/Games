@@ -35,15 +35,15 @@ function start(){
 
 
 function nextquestion(){
-    let operationLabel = document.getElementById("generatedNumLabel");
+    let operationDiv = document.getElementById("operation");
     correctAnswer = Math.floor(Math.random() * 4) + 1;
-    operationLabel.innerHTML = "GO!";
+    operationDiv.innerHTML = "What is your number?";
     console.log(correctAnswer );
     
-    let wrongAnswer1 = Math.floor(Math.random()* 4) + 1;
-    let wrongAnswer2 = Math.floor(Math.random()* 4) + 1;
-    let wrongAnswer3 = Math.floor(Math.random()* 4) + 1;
-    let wrongAnswer4 = Math.floor(Math.random()* 4) + 1;
+    let wrongAnswer1 = Math.floor(Math.random()* 4) * Math.floor(Math.random()* 4);
+    let wrongAnswer2 = Math.floor(Math.random()* 4) * Math.floor(Math.random()* 4);
+    let wrongAnswer3 = Math.floor(Math.random()* 4) * Math.floor(Math.random()* 4);
+    let wrongAnswer4 = Math.floor(Math.random()* 4) * Math.floor(Math.random()* 4);
 
     document.getElementById("btn1").innerHTML = wrongAnswer1;
     document.getElementById("btn2").innerHTML = wrongAnswer2;
@@ -68,6 +68,7 @@ function checkAnswer(buttonIndex){
     let answer =document.getElementById("btn" + buttonIndex).innerHTML;
     if (answer == correctAnswer) score += 10;
     document.getElementById("currentscore").innerHTML = "Current Score " +  score;
+    nextquestion();
 }
 /*
 

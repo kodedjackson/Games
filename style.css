@@ -9,7 +9,7 @@
 }
 
 
-#heading, #currentscore, #generatedNumLabel, #highscore {
+#heading, #currentscore, #operation, #highscore {
   z-index: 2;
   position: relative;
   margin: auto;
