@@ -33,6 +33,16 @@ p{
   margin-top: 2px;
   margin-bottom: 30px;
   border-radius: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+#show2{
+  z-index: 2;
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
 }
 
 /*::::::::::::::INDEX STYLING:::::::::::::::*/
