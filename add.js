@@ -1,17 +1,9 @@
 var x = document.getElementById("myAudio");
-let timeLeft = 10;
+let timeLeft = 15;
 let timerinterval;
 highscore = 0;
 score = 0;
 correctAnswer = 0;
-
-window.onload = function(){
-    scoreFromBrowser = localStorage.getItem("highscore");
-    if (scoreFromBrowser != undefined) highscore = scoreFromBrowser;
-    document.getElementById("highscore").innerHTML = "High Score: " + highscore; 
-
-}
-
 
 function timmer(){
         let timeDisplay = document.getElementById("time");
@@ -26,13 +18,19 @@ function timmer(){
                 document.getElementById("btn3").hidden = true;
                 document.getElementById("btn4").hidden = true;
                 window.alert("GAME OVER!");
-                location.reload();
+                location.reload();  
             }
     },1000)
 }
 
 function dis(){
-    document.getElementById("startbtn").hidden =true;
+    document.getElementById("startbtn").hidden = true;
+    document.getElementById("btn1").hidden = false;
+    document.getElementById("btn2").hidden = false;
+    document.getElementById("btn3").hidden = false;
+    document.getElementById("btn4").hidden = false;
+    
+    
 }
 
 function playAudio() {
