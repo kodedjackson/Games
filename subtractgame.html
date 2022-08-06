@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>Subtract</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Subtract Game</title>
 </head>
 <body>
     <div id="gamesec">
@@ -17,9 +17,6 @@
           <div id="currentscore" type="text">Current Score: 0</div><br>
         <h1 id="heading">What is the Answer?</h1>
         <div id="operation">0 - 0</div>
-        <!--<div id="maindiv">
-            <input id="inputId" style="font-size: 60px;" value="0"></label>
-        </div>-->
         <div id="time" hidden>
             Time Left: 
         </div>
@@ -28,23 +25,19 @@
             <button id="btn2" onclick="checkAnswer(2)" style="font-size: 25px">0</button>
             <button id="btn3" onclick="checkAnswer(3)" style="font-size: 25px">0</button>
             <button id="btn4" onclick="checkAnswer(4)" style="font-size: 25px">0</button>
-            <!--            <button id="upbtn" onclick="up()" style="font-size: 30px; align-items: center">+</button>
-            <button id="downbtn" onclick="down()" style="font-size: 30px; align-items: center">-</button><br>
-            <button id="startbtn" onclick="start()" style="font-size: 30px; align-items: center">START GAME</button>
-            <button id="resetbtn" onclick="reset()" style="font-size: 30px; align-items: center">RESET</button>-->
         </div>
         <div id="startbtnDiv">
             <button id="startbtn" onclick="start()">START</button>
-            <a href="/index.html">
-                <img src="/files/home.png" alt="W3Schools.com" width="60" height="80">
+            <a href="index.html">
+                <img src="home.png" alt="homeicon" width="60" height="80">
                 </a>
         </div>
         <audio id="myAudio" >
-            <source src="/beep audio.mp3" type="audio/mp3">
+            <source src="beep audio.mp3" type="audio/mp3">
         </audio>
     </div>
 </body>
-<script src="/scripts/sub.js"></script>
+<script src="sub.js"></script>
 </html>
 
 

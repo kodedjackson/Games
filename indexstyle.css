@@ -49,7 +49,7 @@ body{
     position: fixed;
     margin: auto;
     padding-top: 50px;
-    background: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.2)), url(/files/26293.jpg);
+    background: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.2)), url(26293.jpg);
   }
   
   button {

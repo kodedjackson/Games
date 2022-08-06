@@ -1,5 +1,5 @@
 var x = document.getElementById("myAudio");
-let timeLeft = 10;
+let timeLeft = 15;
 let timerinterval;
 highscore = 0;
 score = 0;
@@ -50,10 +50,10 @@ function start(){
 
 function nextquestion(){
     let operationDiv = document.getElementById("operation");
-    let firstNum = Math.floor(Math.random() * 10) +1;
+    let firstNum = Math.floor(Math.random() * 56) +7;
     let secondNum =  Math.floor(Math.random() * 10) +1;
-    correctAnswer = firstNum * secondNum;
-    operationDiv.innerHTML = firstNum + " ×  " + secondNum;
+    correctAnswer = firstNum - secondNum;
+    operationDiv.innerHTML = firstNum  + " - " + secondNum;
     console.log(correctAnswer );
     
     let wrongAnswer1 = Math.floor(Math.random()* 10) + 1 * Math.floor(Math.random()* 10); 
@@ -83,9 +83,7 @@ function nextquestion(){
 function checkAnswer(buttonIndex){
     let answer =document.getElementById("btn" + buttonIndex).innerHTML;
     if (answer == correctAnswer) score += 10;
-    document.getElementById("operation").innerHTML = "Correct!"
     document.getElementById("currentscore").innerHTML = "Current Score " +  score;
-    document.getElementById("operation").innerHTML = "Correct!"
     if (score > highscore) highscore = score;
     localStorage.setItem("highscore", highscore);
     document.getElementById("highscore").innerHTML = "High Score: " + highscore; 

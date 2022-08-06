@@ -1,5 +1,5 @@
 var x = document.getElementById("myAudio");
-let timeLeft = 10;
+let timeLeft = 15;
 let timerinterval;
 highscore = 0;
 score = 0;
@@ -52,8 +52,8 @@ function nextquestion(){
     let operationDiv = document.getElementById("operation");
     let firstNum = Math.floor(Math.random() * 10) +1;
     let secondNum =  Math.floor(Math.random() * 10) +1;
-    correctAnswer = firstNum + secondNum;
-    operationDiv.innerHTML = firstNum + " + " + secondNum;
+    correctAnswer = firstNum * secondNum;
+    operationDiv.innerHTML = firstNum + " ×  " + secondNum;
     console.log(correctAnswer );
     
     let wrongAnswer1 = Math.floor(Math.random()* 10) + 1 * Math.floor(Math.random()* 10); 
