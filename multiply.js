@@ -1,5 +1,5 @@
 var x = document.getElementById("myAudio");
-let timeLeft = 10;
+let timeLeft = 15;
 let timerinterval;
 highscore = 0;
 score = 0;
